@@ -31,5 +31,5 @@ export default {
 <style scoped>
     .city-selector{display: grid;grid-template-columns: repeat(5, 1fr);}
     .city-selector li{display: flex;justify-content:center;align-items:center;border:0.05em solid #efefef;padding:0.3em;cursor:pointer;}
-    .isSelected{background: #ff0000;color:#fff;}
+    .isSelected{background: #607cc3;color:#fff;}
 </style>
