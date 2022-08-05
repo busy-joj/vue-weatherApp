@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import weatherMixin from "@/mixins/weatherMixin"
 import ConHeader from './ConHeader'
 import CitySeletor from './CitySeletor'
 import WeatherList from './WeatherList'
@@ -20,6 +21,7 @@ export default {
         CitySeletor,
         WeatherList
     },
+    mixins:[weatherMixin],
     data(){
       return{
         weatherList:[]
@@ -28,7 +30,8 @@ export default {
     methods:{
       selectCity(city){
         if(city.selected){
-          this.weatherList.push(city)
+          const weather = this.getWeatherInfo(city)
+          this.weatherList.push(weather)
         } else{
           const index = this.weatherList.findIndex(weather => weather.code===city.code)
           this.weatherList.splice(index, 1)
