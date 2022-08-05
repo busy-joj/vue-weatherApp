@@ -13,7 +13,7 @@ export default {
         return{
             cities:[
                 { code: "Seoul", label: "서울", selected:false},
-                { code: "Tokyo", label: "도쿄", selected:true},
+                { code: "Tokyo", label: "도쿄", selected:false},
                 { code: "London", label: "런던", selected:false},
                 { code: "Moscow", label: "모스크바", selected:false},
                 { code: "Yakutsk", label: "야크추크", selected:false}
@@ -23,6 +23,7 @@ export default {
     methods:{
         selectCity(city){
             city.selected = !city.selected;
+            this.$emit("selectCity", city)
         }
     }
 }
