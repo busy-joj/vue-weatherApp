@@ -28,12 +28,12 @@ export default {
       }
     },
     methods:{
-      selectCity(city){
+      async selectCity(city){
         if(city.selected){
-          const weather = this.getWeatherInfo(city)
+          const weather = await this.getWeatherInfo(city)        
           this.weatherList.push(weather)
         } else{
-          const index = this.weatherList.findIndex(weather => weather.code===city.code)
+          const index = this.weatherList.findIndex(weather => weather.code === city.code)
           this.weatherList.splice(index, 1)
         }
         console.log(city)
