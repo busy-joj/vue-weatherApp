@@ -2,12 +2,40 @@
     <header class="header">
         <h2>Weather Application</h2>
         <p>{{ username }}님, 반갑습니다.</p>
+        
     </header>
+    <div class="nav">
+        <div
+        v-for="nav in navigation"
+        :key="nav.name"
+        class="nav-item">
+            <RouterLink
+                :to="nav.href"
+                active-class="active"
+                class="nav-link">
+                {{ nav.name }}
+            </RouterLink>
+        </div>
+    </div>
+    
 </template>
 
 <script>
 export default {
-    
+    data(){
+        return {
+            navigation:[
+                {
+                    name : 'Weather',
+                    href : '/'
+                },
+                {
+                    name : 'Air',
+                    href : '/air'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -21,5 +49,8 @@ export default {
     }
     .header p{
         font-size:12px;color:#fff;
+    }
+    .nav{
+        display:flex;justify-content: space-evenly;
     }
 </style>

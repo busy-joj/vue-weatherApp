@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="weater-lis">
+    <ul class="weater-list">
         <WeatherItem v-for="weather in weatherList" :key="weather.code" :weather="weather"/>
     </ul>
   </div>

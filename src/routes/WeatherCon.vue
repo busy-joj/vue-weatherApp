@@ -10,9 +10,9 @@
 
 <script>
 import weatherMixin from "@/mixins/weatherMixin"
-import ConHeader from './ConHeader'
-import CitySeletor from './CitySeletor'
-import WeatherList from './WeatherList'
+import ConHeader from '@/components/weather/ConHeader'
+import CitySeletor from '@/components/weather/CitySeletor'
+import WeatherList from '@/components/weather/WeatherList'
 
 export default {
     name:"weaterContent",
@@ -31,7 +31,7 @@ export default {
       async selectCity(city){
         if(city.selected){
           const weather = await this.getWeatherInfo(city)        
-          this.weatherList.push(weather)
+          this.weatherList.unshift(weather)
         } else{
           const index = this.weatherList.findIndex(weather => weather.code === city.code)
           this.weatherList.splice(index, 1)

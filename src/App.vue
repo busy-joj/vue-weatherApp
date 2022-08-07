@@ -1,17 +1,15 @@
 <template>
   <MainHeader/>
-  <WeatherCon/>
+  <RouterView />
 </template>
 
 <script>
 import MainHeader from './components/MainHeader'
-import WeatherCon from './components/weather/WeatherCon'
 
 export default {
   name: 'App',
   components: {
-    MainHeader,
-    WeatherCon
+    MainHeader
   }
 }
 </script>
