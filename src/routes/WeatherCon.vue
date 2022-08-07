@@ -43,5 +43,5 @@ export default {
 </script>
 
 <style>
-
+.weather-wrap{padding:0 10px;}
 </style>

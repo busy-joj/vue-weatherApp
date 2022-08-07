@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-    .city-selector{display: grid;grid-template-columns: repeat(5, 1fr);}
-    .city-selector li{display: flex;justify-content:center;align-items:center;border:0.05em solid #efefef;padding:0.3em;cursor:pointer;}
-    .isSelected{background: #607cc3;color:#fff;}
+    .city-selector{display: grid;grid-template-columns: repeat(5, 1fr);gap:15px;margin:0 0 20px 0;}
+    .city-selector li{display: flex;justify-content:center;align-items:center;padding:0.3em;cursor:pointer;border-radius: 10px;background: #ffffff;box-shadow: 3px 3px 6px #a3a3a3, -3px -3px 6px #ffffff}
+    .city-selector li.isSelected{box-shadow: inset 3px 3px 6px #a3a3a3, -3px -3px 6px #ffffff}
 </style>

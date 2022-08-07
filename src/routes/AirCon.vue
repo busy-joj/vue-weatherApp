@@ -40,5 +40,5 @@ export default {
 </script>
 
 <style>
-
+.air-wrap{padding:0 10px;}
 </style>

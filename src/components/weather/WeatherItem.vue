@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style scoped>
-.weather-item{display:flex;flex-direction: column;justify-content:center;align-items: center;border:1px solid #efefef;padding:0.5em;}
+.weather-item{display:flex;flex-direction: column;justify-content:center;align-items: center;padding:0.5em;border-radius:20px;box-shadow: 10px 10px 20px #a6a6a6,-10px -10px 20px #ffffff;margin-bottom:20px;}
 .weather-item h3{font-size:14px;color:#333;}
 .weather-item .temperature{font-size:36px;}
 .info{display:flex;justify-content:center;align-items: center;font-size:12px;}
